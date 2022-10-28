@@ -1,0 +1,19 @@
+{
+	"name": "lk_datalake",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://adlslearningdbc.dfs.core.windows.net/",
+			"accountKey": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "lk_keyvault",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "datalakesecret"
+			}
+		}
+	}
+}

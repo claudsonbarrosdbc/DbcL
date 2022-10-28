@@ -1,0 +1,26 @@
+{
+	"name": "pl_main",
+	"properties": {
+		"activities": [
+			{
+				"name": "ingestion_bronze",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "pl_ingestion",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": false
+				}
+			}
+		],
+		"folder": {
+			"name": "project"
+		},
+		"annotations": [],
+		"lastPublishTime": "2022-09-30T18:01:41Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
